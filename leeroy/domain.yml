@@ -15,6 +15,9 @@ templates:
     - "hey there!"
     - "Sup gangsta"
     - "Hey buddy ol' pal"
+  utter_how_can_I_help:
+    - "What can I do for you?"
+    - "Need a hand with something?"
   utter_what_I_can_do:
     - "I can do lots of things ;).... not really I can only check open house times atm"
   utter_goodbye:
@@ -22,10 +25,15 @@ templates:
     - "Bye-bye"
   utter_on_it:
     - "I'm on it"
+  utter_wtf:
+    - Sorry I got no clue what you talking about
+    - Ask me something else maybe? It's just a demo after all :P
 
 actions:
 - utter_greet
+- utter_how_can_I_help
 - utter_what_I_can_do
 - utter_goodbye
 - utter_on_it
+- utter_wtf
 - actions.ActionCheckOpenHouses
