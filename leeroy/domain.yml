@@ -1,0 +1,23 @@
+slots:
+  when:
+    type: text
+
+entities:
+- when
+
+intents:
+ - check_open_house_times
+
+templates:
+  utter_greet:
+    - "hey there!"
+  utter_goodbye:
+    - "goodbye :("
+    - "Bye-bye"
+  utter_on_it:
+    - "I'm on it"
+
+actions:
+- utter_greet
+- utter_goodbye
+- utter_on_it
