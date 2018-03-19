@@ -1,0 +1,39 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_what_I_can_do
+- utter_goodbye
+- utter_on_it
+- action_check_open_houses
+actions:
+- utter_greet
+- utter_what_I_can_do
+- utter_goodbye
+- utter_on_it
+- actions.ActionCheckOpenHouses
+config:
+  store_entities_as_slots: true
+entities:
+- when
+intents:
+- greet
+- listActions
+- checkOpenHouses
+slots:
+  when:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there!
+  - text: Sup gangsta
+  - text: Hey buddy ol' pal
+  utter_on_it:
+  - text: I'm on it
+  utter_what_I_can_do:
+  - text: I can do lots of things ;).... not really I can only check open house times
+      atm
+topics: []

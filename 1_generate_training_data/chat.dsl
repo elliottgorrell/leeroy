@@ -1,3 +1,9 @@
+%[greet]
+    ~[greet] ~[botName]?
+
+%[listActions]
+    ~[greet]? ~[botName]? ~[whatCanYouDo]
+
 %[checkOpenHouses]
     ~[greet]? ~[botName]? ~[request]? ~[please]? ~[openHouses] @[when]
     ~[greet]? ~[botName]? ~[requestFirstPerson]? ~[please]? ~[openHousesFirstPerson] @[when]
@@ -34,11 +40,26 @@
     show me my open houses
     the house opening I have
 
+~[week]
+    this week
+    for the week
+
+~[nextWeek]
+    next week
+    the following week
+    the week after this
+
 @[when]
     today
     tomorrow
-    this week
-    this afternoon
+    ~[week]
+    ~[nextWeek]
+    afternoon
     tonight
-    this morning
-    next week
+    morning
+
+~[whatCanYouDo]
+    what can you do
+    what can I ask
+    what are you able to do
+    how can you help me
