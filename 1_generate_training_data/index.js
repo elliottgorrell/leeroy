@@ -1,11 +1,12 @@
 const fs = require('fs');
 const chatito = require("chatito");
 
-var dslDefinitionString = fs.readFileSync('dsl.json', 'utf8');
+var dslDefinitionString = fs.readFileSync('chat.dsl', 'utf8');
 
-const dataset = chatito.datasetFromString(dslDefinitionString);
+var dataset = chatito.datasetFromString(dslDefinitionString);
+var datasetString = JSON.stringify(dataset,null,2);
 
-fs.writeFile('training_data.json', dataset, (err) => {
+fs.writeFile('training_data.json', datasetString, (err) => {
     if (err)
         return console.log(err);
 });
