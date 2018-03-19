@@ -15,7 +15,7 @@ from rasa_core.policies.memoization import MemoizationPolicy
 logger = logging.getLogger(__name__)
 
 
-def run_bot_online(input_channel, interpreter,
+def run_bot(input_channel, interpreter,
                           domain_file="domain.yml",
                           training_data_file='data/stories.md'):
     agent = Agent(domain_file,
@@ -34,4 +34,4 @@ def run_bot_online(input_channel, interpreter,
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel="INFO")
-    run_bot_online(ConsoleInputChannel(), RasaNLUInterpreter(model_directory="models/nlu/default/current",config_file="nlu_model_config.json"))
+    run_bot(ConsoleInputChannel(), RasaNLUInterpreter(model_directory="models/nlu/default/current",config_file="nlu_model_config.json"))
