@@ -3,14 +3,20 @@ slots:
     type: text
 
 entities:
-- when
+  - when
 
 intents:
- - check_open_house_times
+  - greet
+  - listActions
+  - checkOpenHouses
 
 templates:
   utter_greet:
     - "hey there!"
+    - "Sup gangsta"
+    - "Hey buddy ol' pal"
+  utter_what_I_can_do:
+    - "I can do lots of things ;).... not really I can only check open house times atm"
   utter_goodbye:
     - "goodbye :("
     - "Bye-bye"
@@ -19,5 +25,7 @@ templates:
 
 actions:
 - utter_greet
+- utter_what_I_can_do
 - utter_goodbye
 - utter_on_it
+- actions.ActionCheckOpenHouses
