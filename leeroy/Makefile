@@ -8,3 +8,5 @@ train-nlu:
 train-dialogue:
 	python3 bot.py train-dialogue
 
+interactive-story-training:
+	python3 interactive_training.py
