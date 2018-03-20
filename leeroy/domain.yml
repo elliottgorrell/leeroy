@@ -1,14 +1,18 @@
 slots:
   when:
-    type: text
+    type: unfeaturized
+  location:
+    type: unfeaturized
 
 entities:
   - when
+  - location
 
 intents:
   - greet
   - listActions
   - checkOpenHouses
+  - checkProperties
 
 templates:
   utter_greet:
@@ -20,12 +24,14 @@ templates:
     - "Need a hand with something?"
   utter_what_I_can_do:
     - "I can do lots of things ;).... not really I can only check open house times atm"
+  utter_where_are_you:
+    - "Can you please tell me where you are near (Don't have location services yet...)"
   utter_goodbye:
     - "goodbye :("
     - "Bye-bye"
   utter_on_it:
     - "I'm on it"
-  utter_wtf:
+  utter_default:
     - Sorry I got no clue what you talking about
     - Ask me something else maybe? It's just a demo after all :P
 
@@ -33,7 +39,9 @@ actions:
 - utter_greet
 - utter_how_can_I_help
 - utter_what_I_can_do
+- utter_where_are_you
 - utter_goodbye
 - utter_on_it
-- utter_wtf
+- utter_default
 - actions.ActionCheckOpenHouses
+- actions.ActionCheckProperties

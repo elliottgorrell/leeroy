@@ -14,3 +14,11 @@ class ActionCheckOpenHouses(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message("No Open Houses implementation yet")
         return []
+
+class ActionCheckProperties(Action):
+    def name(self):
+        return 'action_check_properties'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message("No Open Houses implementation yet")
+        return []
