@@ -51,7 +51,7 @@ def train_nlu():
 def run(serve_forever=True):
     print("Loading agent...")
     interpreter = RasaNLUInterpreter("models/nlu/default/current")
-    agent = Agent.load("models/dialogue", interpreter=interpreter)
+    agent = Agent.load("models/nlu", interpreter=interpreter)
 
     if serve_forever:
         agent.handle_channel(ConsoleInputChannel())
