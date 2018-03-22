@@ -8,5 +8,5 @@
     "ner_synonyms"
   ],
   "path" : "./models/nlu",
-  "data" : "./data/open_houses.json"
+  "data" : "./data/training/nlu"
 }
