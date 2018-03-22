@@ -18,7 +18,7 @@ You will need to have the following:
 `RASA_CORE`: This is a framework for designing dialog flow, creating a server which handles chat and responds to you and doing interactive training with your bot. It is made up of **yaml** and **markdown** files to structure the dialogueflow and then python classes are used for advanced actions.
 
 `Spacy`: The chosen NLP backend framework. We will need to get this package and also download a "model" for it which are based on language, domain and size. You can get very large specialised models for training in certain situations.
-Note: I originally tried to use the default small english package **en_core_web_sm** as when you run your training this model needs to be loaded and the smaller library loads about 10x faster. However was getting this weird error [[1]](#1.) so ended up using the rasa recommended **en_core_web_md**.
+Note: I originally tried to use the default small english package **en_core_web_sm** as when you run your training this model needs to be loaded and the smaller library loads about 10x faster. However was getting this weird error [[1]](#1) so ended up using the rasa recommended **en_core_web_md**.
 
 I won't list how to install the language compilers and package managers but feel free to slack me if you have trouble :). To install the project specific stuff - run the following:
 
