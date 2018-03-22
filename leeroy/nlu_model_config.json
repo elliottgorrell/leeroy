@@ -1,4 +1,5 @@
 {
+  "language": "en_core_web_md",
   "pipeline": [
     "nlp_spacy",
     "tokenizer_spacy",
