@@ -14,7 +14,6 @@ intents:
   - wtf
   - listActions
   - checkOpenHouses
-  - checkProperties
 
 templates:
   utter_greet:
@@ -46,4 +45,3 @@ actions:
 - utter_on_it
 - utter_default
 - actions.ActionCheckOpenHouses
-- actions.ActionCheckProperties
