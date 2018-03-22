@@ -45,6 +45,16 @@ The model creation will go through a few steps which can be seen in nlu_model_co
 
 When it is finished you will have new content in `models/nlu/default/current`
 
+### Create a dialogue policy
+In rasa you construct hypothetical conversational flows using RASAs **story** format. It is a markdown file where you declare when an intent is picked up what the action form your bot should be, recording conversations means the flow of intents and actions is recordered and the more stories the better a policy that can be generated. At `data/training/story.md` you can see I have created one story for each intent and the action to perform for that intent (very simple). There is also one generated story from a small interactive training session I did with Leeroy.
+Enough of this lets create the policy `make train-dialogue`.
+
+### Lets do some interactive training
+You can start up the bot and have a conversation where after every action Leeroy asks you to confirm if what happened was correct or not. If it wasn't you tell leeroy what he should of done or heard. When you are finished you can press `0` and append the story to the `data/training/stories.md` file
+
+### you can also just spin him up and have a yarn
+`make run` will get leeroy up and running so you can have a chat if you are lonely.
+
 
 
 ## TODO
