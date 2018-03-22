@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 def train_dialogue(domain_file="domain.yml",
                    model_path="models/nlu",
-                   training_data_file="data/stories.md"):
+                   training_data_file="data/training/stories.md"):
     agent = Agent(domain_file,
                   policies=[MemoizationPolicy()])
 
@@ -35,23 +35,10 @@ def train_dialogue(domain_file="domain.yml",
     return agent
 
 
-def train_nlu():
-    from rasa_nlu.converters import load_data
-    from rasa_nlu.config import RasaNLUConfig
-    from rasa_nlu.model import Trainer
-
-    training_data = load_data('data/franken_data.json')
-    trainer = Trainer(RasaNLUConfig("nlu_model_config.json"))
-    trainer.train(training_data)
-    model_directory = trainer.persist('models/nlu/', fixed_model_name="current")
-
-    return model_directory
-
-
 def run(serve_forever=True):
     print("Loading agent...")
     interpreter = RasaNLUInterpreter("models/nlu/default/current")
-    agent = Agent.load("models/nlu", interpreter=interpreter)
+    agent = Agent.load("", interpreter=interpreter)
 
     if serve_forever:
         agent.handle_channel(ConsoleInputChannel())
@@ -66,18 +53,15 @@ if __name__ == '__main__':
 
     parser.add_argument(
             'task',
-            choices=["train-nlu", "train-dialogue", "run"],
+            choices=["train-dialogue", "run"],
             help="what the bot should do - e.g. run or train?")
     task = parser.parse_args().task
 
     # decide what to do based on first parameter of the script
-    if task == "train-nlu":
-        train_nlu()
-    elif task == "train-dialogue":
+    if task == "train-dialogue":
         train_dialogue()
     elif task == "run":
         run()
     else:
-        warnings.warn("Need to pass either 'train-nlu', 'train-dialogue' or "
-                      "'run' to use the script.")
+        warnings.warn("Need to pass either 'train-dialogue' or 'run' to use the script.")
         exit(1)

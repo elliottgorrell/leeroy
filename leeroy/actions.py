@@ -12,7 +12,7 @@ class ActionCheckOpenHouses(Action):
         return 'action_check_open_houses'
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message("No Open Houses implementation yet")
+        dispatcher.utter_message("We still need to do some fancy Open Houses implementation...")
         return []
 
 class ActionCheckProperties(Action):
@@ -20,5 +20,5 @@ class ActionCheckProperties(Action):
         return 'action_check_properties'
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message("No Open Houses implementation yet")
+        dispatcher.utter_message("Not sure how to check your properties yet :/")
         return []

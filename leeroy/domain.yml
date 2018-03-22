@@ -9,7 +9,9 @@ entities:
   - location
 
 intents:
-  - greet
+  - greeting
+  - farewell
+  - wtf
   - listActions
   - checkOpenHouses
   - checkProperties

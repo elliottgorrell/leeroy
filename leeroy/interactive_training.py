@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 def run_bot(input_channel, interpreter,
                           domain_file="domain.yml",
-                          training_data_file='data/stories.md'):
+                          training_data_file='data/training/stories.md'):
     agent = Agent(domain_file,
                   policies=[MemoizationPolicy(), KerasPolicy()],
                   interpreter=interpreter)
