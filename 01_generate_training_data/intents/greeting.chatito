@@ -1,0 +1,25 @@
+%[greeting]
+    ~[hello]? ~[bot]? ~[howAreYou]?
+
+~[hello]
+    hey
+    hi
+    sup
+    Hello
+
+~[bot]
+    leeroy
+    buddy
+    bud
+    pal
+    friend
+
+~[howAreYou]
+    how are you
+    you all good
+    How do you feel
+    regards
+    Hows the day
+    I hope you are well
+    whats up
+    whats going on

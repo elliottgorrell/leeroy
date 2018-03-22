@@ -1,0 +1,31 @@
+%[listActions]
+    ~[greet]? ~[botName]? ~[request]? ~[please]? ~[whatCanYouDo]
+
+~[greet]
+    hey
+    hi
+    hello
+    greetings
+    wasup
+    yo
+
+~[botName]
+    leeroy
+    leeboy
+    leroy
+
+~[request]
+    can you
+
+~[requestFirstPerson]
+    can I
+
+~[please]
+    please
+    pls
+
+~[whatCanYouDo]
+    what can you do
+    what can I ask
+    what are you able to do
+    how can you help me

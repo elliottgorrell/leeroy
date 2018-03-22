@@ -1,0 +1,16 @@
+{
+  "name": "01_generate_training_data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generateTrainingData.js",
+  "dependencies": {
+    "chatito": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node generateTrainingData.js"
+  },
+  "author": "elliott gorrell",
+  "license": "ISC"
+}

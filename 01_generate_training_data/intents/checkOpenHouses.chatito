@@ -1,9 +1,3 @@
-%[greet]
-    ~[greet] ~[botName]?
-
-%[listActions]
-    ~[greet]? ~[botName]? ~[whatCanYouDo]
-
 %[checkOpenHouses]
     ~[greet]? ~[botName]? ~[request]? ~[please]? ~[openHouses] @[when]
     ~[greet]? ~[botName]? ~[requestFirstPerson]? ~[please]? ~[openHousesFirstPerson] @[when]
