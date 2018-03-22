@@ -17,3 +17,20 @@
 ## Master tries to tricks us
 * wtf
   - utter_default
+
+## Generated Story -6774732796759264827
+* greeting
+    - utter_greet
+* listActions
+    - utter_what_I_can_do
+    - utter_what_I_can_do
+* wtf
+    - utter_default
+* checkOpenHouses{"when": "today"}
+    - slot{"when": "today"}
+    - action_check_open_houses
+* checkProperties
+* checkProperties
+* wtf
+    - utter_default
+    - export
